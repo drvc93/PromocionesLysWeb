@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,6 +61,7 @@
     <Content Include="ganaconlys.aspx" />
     <Content Include="ganaconlys.html" />
     <Content Include="imgs\afichefiltroslys.jpg" />
+    <Content Include="imgs\afichefiltroslys2.jpg" />
     <Content Include="Portal.aspx" />
     <Content Include="Catalogo.aspx" />
     <Content Include="WSExtraNet.asmx" />
