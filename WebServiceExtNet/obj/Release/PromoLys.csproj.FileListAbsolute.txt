@@ -1,0 +1,5 @@
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.pdb
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll.licenses
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.pdb

@@ -1,0 +1,12 @@
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.pdb
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.dll.licenses
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.pdb
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Debug\PromoLys.csprojResolveAssemblyReference.cache
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.dll.licenses
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.dll
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Debug\WebServiceExtNet.pdb
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.dll.config
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.dll
+C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.pdb
