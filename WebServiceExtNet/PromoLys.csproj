@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ganaconlys.aspx" />
-    <Content Include="ganaconlys.html" />
     <Content Include="imgs\afichefiltroslys.jpg" />
     <Content Include="imgs\afichefiltroslys2.jpg" />
     <Content Include="Portal.aspx" />
