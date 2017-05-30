@@ -9,3 +9,9 @@ C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\bin\W
 C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll.licenses
 C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll
 C:\Users\PC\Downloads\PromocionesLysWeb\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.pdb
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\bin\WebServiceExtNet.pdb
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll.licenses
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.dll
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\obj\Release\WebServiceExtNet.pdb
+D:\DVILLANUEVA\PromoLysFinal\PromocionesLysWeb\WebServiceExtNet\obj\Release\PromoLys.csprojResolveAssemblyReference.cache

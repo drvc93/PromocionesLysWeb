@@ -13,6 +13,14 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            
+            <script>
+                
+                function maxLengthCheck(object) {
+                    if (object.value.length > object.maxLength)
+                        object.value = object.value.slice(0, object.maxLength)
+                }
+            </script>
 
             <script language=Javascript>
                 function isNumberKey(evt) {
@@ -23,27 +31,20 @@
                 }
             </script>
 
-            <script type="text/javascript">
-                function ShowProgress() {
-                    setTimeout(function () {
-                        var modal = $('<div />');
-                        modal.addClass("modal");
-                        $('body').append(modal);
-                        var loading = $(".loading");
-                        loading.show();
-                        var top = Math.max($(window).height() / 2 - loading[0].offsetHeight / 2, 0);
-                        var left = Math.max($(window).width() / 2 - loading[0].offsetWidth / 2, 0);
-                        loading.css({ top: top, left: left });
-                    }, 200);
-                }
-                $('form').live("submit", function () {
-                    ShowProgress();
-                });
-            </script>
-
             <script>
                 function scrollWin() {
                     window.scrollTo(1000, 500);
+                }
+            </script>
+
+            <script type="text/javascript">
+                function isNumber(evt) {
+                    evt = (evt) ? evt : window.event;
+                    var charCode = (evt.which) ? evt.which : evt.keyCode;
+                    if ((charCode > 31 && charCode < 48) || charCode > 57) {
+                        return false;
+                    }
+                    return true;
                 }
             </script>
 
@@ -54,7 +55,7 @@
                     margin: 0 auto;
                 }
 
-                input[type=text], select, #txtFechaNacimiento, #txtCorreo
+                input[type=text], select, #txtFechaNacimiento, #txtCorreo, #txtDni
                 {
                     width: 100%;
                     padding: 12px 20px;
@@ -102,22 +103,28 @@
 
                 <form runat="server" id="form1">
                     <asp:ScriptManager runat="server"></asp:ScriptManager>
-                    <asp:Timer ID="timerPage" runat="server" OnTick="timerPage_Tick" Interval="1000"  ></asp:Timer>
+
                     <asp:UpdatePanel runat="server" >
                         <Triggers>
-                            <asp:AsyncPostBackTrigger ControlID="timerPage" EventName="Tick" />
-                            <asp:AsyncPostBackTrigger ControlID="btnReg" EventName="Click" />
+
+                        <%--<asp:AsyncPostBackTrigger ControlID="btnReg" EventName="Click" />--%>
                         </Triggers>
                         <ContentTemplate>
 
                             <div id="inner" style="margin-top:15px;" >
 
                                 <table>
-
+                                    <tr>
+                                        <td>
+                                            <button style="background-color:black;color:white;width:15px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td >
                                             <asp:Label   runat="server" Text="NOMBRES" ForeColor="White" Font-Size="Large" Font-Italic="true" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox  PlaceHolder="Nombres"   ID="txtNombre"  runat="server"  CssClass="text-center" > </asp:TextBox>
+                                            <asp:TextBox  PlaceHolder="Nombres" style="text-transform:uppercase;"    ID="txtNombre"  runat="server"  CssClass="text-center" > </asp:TextBox>
 
                                         </td>
                                     </tr>
@@ -125,7 +132,7 @@
                                     <tr>
                                         <td >
                                             <asp:Label   runat="server" Text="APELLIDOS" ForeColor="White" Font-Size="Large" Font-Italic="true" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox  PlaceHolder="Apellidos"   ID="txtApellidos"  runat="server"  CssClass="text-center" > </asp:TextBox>
+                                            <asp:TextBox  PlaceHolder="Apellidos" style="text-transform:uppercase;"  ID="txtApellidos"  runat="server"  CssClass="text-center" > </asp:TextBox>
 
                                         </td>
                                     </tr>
@@ -133,8 +140,8 @@
                                     <tr>
                                         <td >
                                             <asp:Label   runat="server" Text="N° DNI" ForeColor="White" Font-Size="Large" Font-Italic="true" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox  PlaceHolder="DNI"  ID="txtDni" onkeypress="return isNumberKey(event)" runat="server" MaxLength="8" CssClass="text-center" > </asp:TextBox>
-                                            <asp:RegularExpressionValidator style="display:none" ID="RegularExpressionValidator1" ControlToValidate="txtDni" runat="server" ErrorMessage="Solo números" ValidationExpression="\d+"></asp:RegularExpressionValidator>
+                                            <asp:TextBox   type="number"   oninput="maxLengthCheck(this)"  PlaceHolder="DNI"  ID="txtDni"  runat="server" maxlength = "8" CssClass="text-center" > </asp:TextBox>
+                                        <%--<asp:RegularExpressionValidator style="display:none" ID="RegularExpressionValidator1" ControlToValidate="txtDni" runat="server" ErrorMessage="Solo números" ValidationExpression="\d+"></asp:RegularExpressionValidator>--%>
 
                                         </td>
                                     </tr>
@@ -165,7 +172,7 @@
                                     <tr>
                                         <td >
                                             <asp:Label   runat="server" Text="Codigo" ForeColor="White" Font-Size="Large" Font-Italic="true" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox  PlaceHolder="Codigo Promocion" style="margin-bottom:8px;"  ID="txtCodPromocion"  runat="server"  CssClass="text-center" > </asp:TextBox>
+                                            <asp:TextBox  PlaceHolder="Codigo Cupon" style="margin-bottom:8px;text-transform:uppercase;"  ID="txtCodPromocion"  runat="server"  CssClass="text-center" > </asp:TextBox>
 
                                         </td>
                                     </tr>
@@ -177,19 +184,20 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div id="diverror"  runat="server"  visible="false" style="margin-top:0px;" class="alert alert-danger">
-                                                <strong>Error!</strong>Error al registrar codigo.
+                                            <div id="diverror"  runat="server"  visible="false" style="margin-top:0px; max-width:450px" class="alert alert-danger">
+                                                <strong>Error!</strong> <asp:Label    Style="word-wrap: normal; word-break: break-all;"  ID="txtError" runat="server" Text="Erro al registrar." ></asp:Label>
                                             </div>
-                                            
-                                            <div id="divsuccess"  runat="server" visible="false"  style="margin-top:0px;" class="alert alert-success">
-                                                <strong>Exito!</strong> Se registro correctamente
+
+                                            <div id="divsuccess"   runat="server" visible="false"  style="  max-width:100%; margin-top:0px;" class="alert alert-success">
+                                                <strong>Exito!</strong>Se registro correctamente, si tiene otro  codigo de cupon  puede registrarlo ahora ! .
+                                               
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <asp:Label runat="server"  style="display:none;" ID="txtTimer"></asp:Label>
-                                           
+
                                         </td>
                                     </tr>
 
